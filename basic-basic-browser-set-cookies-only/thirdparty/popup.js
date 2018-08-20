@@ -1,14 +1,14 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  updateElWithHostname('#hostname');
+  updateElWithOrigin('#origin');
   addCloseFeature('#close-window');
   addFooCookieFeature({ actions: { read: '#foo-cookie-read-action', write: '#foo-cookie-write-action' }, result: '#foo-cookie-result' })
 });
 
 
-function updateElWithHostname(selector) {
-  updateDomElementText(document.querySelector(selector), document.location.hostname);
+function updateElWithOrigin(selector) {
+  updateDomElementText(document.querySelector(selector), document.origin);
 }
 
 function addCloseFeature(selector) {

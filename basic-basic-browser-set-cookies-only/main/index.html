@@ -2,18 +2,19 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>main - index.css</title>
+    <title>main - index</title>
     <link href="./index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <h1>main</h1>
     <p>
-        hostname: <strong><span id="hostname">unknown yet</span></strong>
+        origin: <strong><span id="origin">unknown yet</span></strong>
     </p>
 
     <form id="thirdparty-form" name="thirdparty-form" method="get">
-      <label>thirdparty domain: <input name="thirdparty-domain" type="text"/> </label> <input type="submit" value="update">
+      <label>thirdparty URL: <input id="thirdparty-url" name="thirdparty-url" type="text"/></label>
+      <input type="submit" value="update">
     </form>
 
     <div id="iframe-main">

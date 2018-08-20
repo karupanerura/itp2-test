@@ -1,15 +1,15 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  updateElWithHostname('#hostname');
+  updateElWithOrigin('#origin');
   addHasStorageAcessOnLoad({ result: '#storage-access-on-load-result' });
   addRequestStorageAccess({ action: '#storage-access-request-action', result: '#storage-access-request-result', cookieResult: '#foo-cookie-result' });
   addFooCookieFeature({ action: '#foo-cookie-action', result: '#foo-cookie-result' })
 });
 
 
-function updateElWithHostname(selector) {
-  updateDomElementText(document.querySelector(selector), document.location.hostname);
+function updateElWithOrigin(selector) {
+  updateDomElementText(document.querySelector(selector), document.origin);
 }
 
 function addHasStorageAcessOnLoad(selectors) {

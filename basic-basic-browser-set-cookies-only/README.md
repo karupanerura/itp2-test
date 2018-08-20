@@ -1,8 +1,12 @@
 # basic bacis browser set cookies only
 
+## public
+* serve main at some domain & thirdparty at some other and point main to thirdparty
+* add thirdparty as prevalent
+
+## locally
 * use something like dnsmasq to resolve main & thirdparty domains to localhost
   * I have resolved an entire TLD, e.g. ".au", so I can play around more easily
-* update the main html with thirdparty iframe src
 * serve this directory with some HTTP server. E.g.:
   * > npm install http-server -g
   * > http-server -p 3005
