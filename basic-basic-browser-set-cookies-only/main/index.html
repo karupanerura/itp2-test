@@ -12,9 +12,14 @@
         hostname: <strong><span id="hostname">unknown yet</span></strong>
     </p>
 
+    <form id="thirdparty-form" name="thirdparty-form" method="get">
+      <label>thirdparty domain: <input name="thirdparty-domain" type="text"/> </label> <input type="submit" value="update">
+    </form>
+
     <div id="iframe-main">
-      <iframe src="http://sub.tracker-domain-001.au:3005/thirdparty/"></iframe>
+      <iframe id="thirdparty-iframe" src=""></iframe>
     </div>
+    <!-- http://sub.thirdparty-domain-001.au:3005/thirdparty/ -->
 
     <script src="./index.js"></script>
 
