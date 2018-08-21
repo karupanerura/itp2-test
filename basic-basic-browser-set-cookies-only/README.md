@@ -1,11 +1,13 @@
 # basic bacis browser set cookies only
 
 ## public
+
 * serve main at some domain & thirdparty at some other and point main to thirdparty
 * add thirdparty as prevalent as per ITP debugging
 * carry on as per local testing
 
 ## locally
+
 * use something like dnsmasq to resolve main & thirdparty domains to localhost
   * I have resolved an entire TLD, e.g. ".au", so I can play around more easily
 * serve this directory with some HTTP server. E.g.:
