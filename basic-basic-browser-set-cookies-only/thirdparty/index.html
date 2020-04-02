@@ -16,6 +16,8 @@
     <ul>
       <li><a id="storage-access-request-action"href="#">[request access]</a></li>
       <li><a id="foo-cookie-action" href="#">[read cookie]</a></li>
+      <li><a id="session-storage-action" href="#">[increment session storage counter]</a></li>
+      <li><a id="local-storage-action" href="#">[increment local storage counter]</a></li>
       <li>open <a href="./popup.html" target="_blank">popup</a> in new window</li>
       <li><a id="reload-iframe" href="#">[reload iframe]</a></li>
     </ul>
@@ -25,6 +27,8 @@
         <li>Storage Access allowed on load result: <strong><span id="storage-access-on-load-result">not updated</span></strong></li>
         <li>Storage Access Request result: <strong><span id="storage-access-request-result">not updated</span></strong></li>
         <li>document.cookie: <strong><span id="document-cookie-value">not updated</span></strong></li>
+        <li>window.sessionStorage('counter'): <strong><span id="window-session-storage-value">not updated</span></strong></li>
+        <li>window.localStorage('counter'): <strong><span id="window-local-storage-value">not updated</span></strong></li>
     </ul>
 
     <script src="./index.js"></script>

@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   addHasStorageAcessOnLoad({ result: '#storage-access-on-load-result' });
   addRequestStorageAccess({ action: '#storage-access-request-action', result: '#storage-access-request-result', cookieResult: '#document-cookie-value' });
   addFooCookieFeature({ action: '#foo-cookie-action', result: '#document-cookie-value' })
+  addSessionStorageFeature({ action: '#session-storage-action', result: '#window-session-storage-value' })
+  addLocalStorageFeature({ action: '#local-storage-action', result: '#window-local-storage-value' })
   addReloadListenter({ action: '#reload-iframe'});
 });
 
@@ -63,6 +65,28 @@ function addFooCookieFeature(selectors) {
   document.querySelector(selectors.action).addEventListener('click', function (e) {
     e.preventDefault();
     udateDomWithCookieVal(resultElement);
+  });
+}
+
+function addSessionStorageFeature(selectors) {
+  const resultElement = document.querySelector(selectors.result);
+  updateDomElementText(resultElement, window.sessionStorage.getItem('counter') || 'no value in session storage');
+  document.querySelector(selectors.action).addEventListener('click', function (e) {
+    e.preventDefault();
+    const counter = parseInt(window.sessionStorage.getItem('counter') || '0');
+    window.sessionStorage.setItem('counter', counter + 1);
+    updateDomElementText(resultElement, window.sessionStorage.getItem('counter'));
+  });
+}
+
+function addLocalStorageFeature(selectors) {
+  const resultElement = document.querySelector(selectors.result);
+  updateDomElementText(resultElement, window.localStorage.getItem('counter') || 'no value in local storage');
+  document.querySelector(selectors.action).addEventListener('click', function (e) {
+    e.preventDefault();
+    const counter = parseInt(window.localStorage.getItem('counter') || '0');
+    window.localStorage.setItem('counter', counter + 1);
+    updateDomElementText(resultElement, window.localStorage.getItem('counter'));
   });
 }
 
